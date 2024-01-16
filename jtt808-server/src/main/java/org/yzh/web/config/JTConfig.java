@@ -19,6 +19,12 @@ import org.yzh.web.endpoint.JTHandlerInterceptor;
 @ConditionalOnProperty(value = "jt-server.jt808.enable", havingValue = "true")
 public class JTConfig {
 
+    /**
+     * messageAdapter：用于解码和编码消息的适配器。
+     * handlerMapping：用于映射请求消息到处理器的处理器映射。
+     * handlerInterceptor：用于拦截请求消息的处理器拦截器。
+     * sessionManager：用于管理会话的会话管理器。
+     */
     private final JTMessageAdapter messageAdapter;
     private final HandlerMapping handlerMapping;
     private final JTHandlerInterceptor handlerInterceptor;
